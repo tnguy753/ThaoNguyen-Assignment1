@@ -14,6 +14,14 @@
 		F6FE102D289251FD00B58A5A /* ThaoNguyen_Assignment1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FE102C289251FD00B58A5A /* ThaoNguyen_Assignment1Tests.swift */; };
 		F6FE1037289251FE00B58A5A /* ThaoNguyen_Assignment1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FE1036289251FE00B58A5A /* ThaoNguyen_Assignment1UITests.swift */; };
 		F6FE1039289251FE00B58A5A /* ThaoNguyen_Assignment1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FE1038289251FE00B58A5A /* ThaoNguyen_Assignment1UITestsLaunchTests.swift */; };
+		F6FE1048289254B900B58A5A /* AlbumList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FE1047289254B900B58A5A /* AlbumList.swift */; };
+		F6FE104C289269ED00B58A5A /* ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FE104B289269ED00B58A5A /* ColorConstants.swift */; };
+		F6FE104E28926B2C00B58A5A /* AlbumDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FE104D28926B2C00B58A5A /* AlbumDetails.swift */; };
+		F6FE10502893AA7000B58A5A /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FE104F2893AA7000B58A5A /* AlbumModel.swift */; };
+		F6FE10522893AABB00B58A5A /* AlbumData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FE10512893AABB00B58A5A /* AlbumData.swift */; };
+		F6FE10542893AEBB00B58A5A /* AlbumRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FE10532893AEBB00B58A5A /* AlbumRow.swift */; };
+		F6FE10582894BBC200B58A5A /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FE10572894BBC200B58A5A /* HomePage.swift */; };
+		F6FE105F2894C38500B58A5A /* AbrilFatface-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6FE105E2894C1C300B58A5A /* AbrilFatface-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +52,15 @@
 		F6FE1032289251FE00B58A5A /* ThaoNguyen-Assignment1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ThaoNguyen-Assignment1UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6FE1036289251FE00B58A5A /* ThaoNguyen_Assignment1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThaoNguyen_Assignment1UITests.swift; sourceTree = "<group>"; };
 		F6FE1038289251FE00B58A5A /* ThaoNguyen_Assignment1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThaoNguyen_Assignment1UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F6FE1047289254B900B58A5A /* AlbumList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumList.swift; sourceTree = "<group>"; };
+		F6FE104B289269ED00B58A5A /* ColorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstants.swift; sourceTree = "<group>"; };
+		F6FE104D28926B2C00B58A5A /* AlbumDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetails.swift; sourceTree = "<group>"; };
+		F6FE104F2893AA7000B58A5A /* AlbumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
+		F6FE10512893AABB00B58A5A /* AlbumData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumData.swift; sourceTree = "<group>"; };
+		F6FE10532893AEBB00B58A5A /* AlbumRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumRow.swift; sourceTree = "<group>"; };
+		F6FE10572894BBC200B58A5A /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		F6FE105E2894C1C300B58A5A /* AbrilFatface-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AbrilFatface-Regular.ttf"; sourceTree = "<group>"; };
+		F6FE10622894C64F00B58A5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +111,11 @@
 		F6FE101A289251FB00B58A5A /* ThaoNguyen-Assignment1 */ = {
 			isa = PBXGroup;
 			children = (
+				F6FE10622894C64F00B58A5A /* Info.plist */,
+				F6FE10592894BF0900B58A5A /* Fonts */,
+				F6FE10462892545300B58A5A /* View */,
+				F6FE10452892544C00B58A5A /* Model */,
 				F6FE101B289251FB00B58A5A /* ThaoNguyen_Assignment1App.swift */,
-				F6FE101D289251FB00B58A5A /* ContentView.swift */,
 				F6FE101F289251FD00B58A5A /* Assets.xcassets */,
 				F6FE1021289251FD00B58A5A /* Preview Content */,
 			);
@@ -125,6 +145,36 @@
 				F6FE1038289251FE00B58A5A /* ThaoNguyen_Assignment1UITestsLaunchTests.swift */,
 			);
 			path = "ThaoNguyen-Assignment1UITests";
+			sourceTree = "<group>";
+		};
+		F6FE10452892544C00B58A5A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F6FE104B289269ED00B58A5A /* ColorConstants.swift */,
+				F6FE104F2893AA7000B58A5A /* AlbumModel.swift */,
+				F6FE10512893AABB00B58A5A /* AlbumData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F6FE10462892545300B58A5A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F6FE101D289251FB00B58A5A /* ContentView.swift */,
+				F6FE1047289254B900B58A5A /* AlbumList.swift */,
+				F6FE104D28926B2C00B58A5A /* AlbumDetails.swift */,
+				F6FE10532893AEBB00B58A5A /* AlbumRow.swift */,
+				F6FE10572894BBC200B58A5A /* HomePage.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F6FE10592894BF0900B58A5A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F6FE105E2894C1C300B58A5A /* AbrilFatface-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +283,7 @@
 			files = (
 				F6FE1023289251FD00B58A5A /* Preview Assets.xcassets in Resources */,
 				F6FE1020289251FD00B58A5A /* Assets.xcassets in Resources */,
+				F6FE105F2894C38500B58A5A /* AbrilFatface-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +308,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6FE10502893AA7000B58A5A /* AlbumModel.swift in Sources */,
+				F6FE104E28926B2C00B58A5A /* AlbumDetails.swift in Sources */,
+				F6FE10542893AEBB00B58A5A /* AlbumRow.swift in Sources */,
+				F6FE1048289254B900B58A5A /* AlbumList.swift in Sources */,
 				F6FE101E289251FB00B58A5A /* ContentView.swift in Sources */,
+				F6FE10582894BBC200B58A5A /* HomePage.swift in Sources */,
 				F6FE101C289251FB00B58A5A /* ThaoNguyen_Assignment1App.swift in Sources */,
+				F6FE10522893AABB00B58A5A /* AlbumData.swift in Sources */,
+				F6FE104C289269ED00B58A5A /* ColorConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +477,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ThaoNguyen-Assignment1/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ThaoNguyen-Assignment1/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -447,6 +507,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ThaoNguyen-Assignment1/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ThaoNguyen-Assignment1/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
