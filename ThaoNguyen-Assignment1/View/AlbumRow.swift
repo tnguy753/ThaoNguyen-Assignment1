@@ -13,7 +13,7 @@ struct AlbumRow: View {
     var body: some View {
 
         ZStack(alignment: .bottom) {
-            Image(album.imageName)
+            Image(album.imageName[0])
                 .resizable()
                 .cornerRadius(20)
                 .scaledToFit()
@@ -39,6 +39,6 @@ struct AlbumRow: View {
 struct AlbumRow_Previews: PreviewProvider {
     static var previews: some View {
         AlbumRow(album: albums[0])
-        AlbumRow(album: albums[0])
+        AlbumRow(album: albums[5])
     }
 }

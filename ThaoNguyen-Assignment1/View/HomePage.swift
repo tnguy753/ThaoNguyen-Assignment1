@@ -8,15 +8,18 @@
 import SwiftUI
 
 struct HomePage: View {
+    var columns = [GridItem(.adaptive(minimum: 160), spacing: 10)]
     var body: some View {
         NavigationView {
                 ZStack {
                     Image("bg2")
+                        .resizable()
                         .edgesIgnoringSafeArea(.all)
-                    VStack {
-                        Text("My Top 10")
+                    VStack(alignment: .leading) {
+                        Text("Artists")
                             .font(.custom("AbrilFatface-Regular", size: 20))
-                        
+                            .foregroundColor(ColorConstants.main1)
+                            .padding()
                         ScrollView(.horizontal, showsIndicators: false){
                         HStack{
                             ForEach(albums, id:\.id){ album in
@@ -25,17 +28,15 @@ struct HomePage: View {
                                     label: {AlbumRow(album: album)}
                                 )
                                 .padding(.trailing)
-                               
-                                
                             }
                             .padding(.leading)
-                            
                         }
                     }
-                   
-               
-                
+                }
+                    .navigationBarHidden(true)
+                    .navigationBarTitle("Homepage", displayMode: .inline)
             }
+                   
         }
         
     }
@@ -46,4 +47,4 @@ struct HomePage_Previews: PreviewProvider {
         HomePage()
     }
 }
-}
+

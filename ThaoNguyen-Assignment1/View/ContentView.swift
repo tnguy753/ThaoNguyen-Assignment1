@@ -9,21 +9,33 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ZStack {
-            Image("bg")
-                .resizable()
-                .edgesIgnoringSafeArea(.all)
-            Button{
-                print("Button pressed")
-            } label: {
-                Text("Red Velvet")
-                    .foregroundColor(ColorConstants.main1)
-                    .fontWeight(.bold)
-                    .font( .custom("AbrilFatface-Regular", size: 40))
+        NavigationView{
+            ZStack {
+                Image("bg2")
+                    .edgesIgnoringSafeArea(.all)
+                NavigationLink(destination: HomePage(), label:{
+                    Text("Music Corner")
+                        .padding()
+                        .foregroundColor(.black)
+                        .font( .custom("AbrilFatface-Regular", size: 40))
+                        .background{
+                            Image("bg")
+                                .resizable()
+                                .frame(width: 200, height:100)
+                            
+                        }
+                        .navigationBarBackButtonHidden(true)
+                }
+            
+                )
             }
-            }
+            .navigationBarHidden(true)
         }
+        
     }
+    
+}
+    
 
 
 struct ContentView_Previews: PreviewProvider {
