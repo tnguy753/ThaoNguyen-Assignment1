@@ -38,7 +38,7 @@ struct AlbumRow: View {
 
 struct AlbumRow_Previews: PreviewProvider {
     static var previews: some View {
-        AlbumRow(album: albums[0])
+        AlbumRow(album: albums[7])
         AlbumRow(album: albums[5])
     }
 }

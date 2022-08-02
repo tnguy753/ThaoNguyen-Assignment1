@@ -15,32 +15,80 @@ struct HomePage: View {
                     Image("bg2")
                         .resizable()
                         .edgesIgnoringSafeArea(.all)
-                    VStack(alignment: .leading) {
-                        Text("Artists")
-                            .font(.custom("AbrilFatface-Regular", size: 20))
-                            .foregroundColor(ColorConstants.main1)
-                            .padding()
-                        ScrollView(.horizontal, showsIndicators: false){
-                        HStack{
-                            ForEach(albums, id:\.id){ album in
-                                NavigationLink(
-                                    destination: AlbumDetails(album: album),
-                                    label: {AlbumRow(album: album)}
-                                )
-                                .padding(.trailing)
-                            }
-                            .padding(.leading)
-                        }
+                    VStack {
+                        artistSection
+                        albumSection
                     }
+                    .edgesIgnoringSafeArea(.top)
+
                 }
-                    .navigationBarHidden(true)
-                    .navigationBarTitle("Homepage", displayMode: .inline)
+               
+        }
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
+    }
+        
+    
+}
+
+extension HomePage {
+    private var artistSection: some View{
+        VStack(alignment: .leading) {
+            Text("Artists")
+                .font(.custom("AbrilFatface-Regular", size: 40))
+                .foregroundColor(ColorConstants.main1)
+                .background(Color.white)
+                .padding()
+        
+            ScrollView(.horizontal, showsIndicators: false){
+                HStack{
+                    ForEach(albums, id:\.id){ album in
+                        NavigationLink(
+                            destination: AlbumDetails(album: album),
+                            label: {ArtistRow(album: album)}
+                        )
+                        .padding(.trailing)
+                        
+                    }
+                    .padding(.leading)
+                    
+                }
+                
             }
-                   
+            
         }
         
     }
+    private var albumSection: some View{
+        VStack(alignment: .leading) {
+            Text("Albums")
+                .font(.custom("AbrilFatface-Regular", size: 40))
+                .foregroundColor(ColorConstants.main1)
+            .padding()
+            ScrollView {
+                VStack {
+                    LazyVGrid(columns: columns, spacing: 1)
+                    {
+                        ForEach(albums, id:\.id){
+                            album in NavigationLink(
+                                destination: AlbumDetails(album: album),
+                                label: {AlbumRow(album: album)}
+                            )
+                            
+                        }
+                        
+                    }
+                    
+                }
+                
+            }
+            
+        }
+        
+    }
+
 }
+
 
 struct HomePage_Previews: PreviewProvider {
     static var previews: some View {

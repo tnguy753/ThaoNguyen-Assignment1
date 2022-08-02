@@ -7,14 +7,18 @@
 
 import Foundation
 import SwiftUI
+import MapKit
 
 struct Album: Identifiable {
     var id = UUID()
     var albumName: String
     var artist: String
+    var logo: String
     var imageName: [String]
     var description: String
     var genre: String
+    var link: String
+    var coordinates: CLLocationCoordinate2D
 //    var image: Image{
 //        Image(imageName)
 //    }
