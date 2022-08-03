@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "purpose-jb.jpeg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "purpose-jb-1.jpeg",
+      "filename" : "planet-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "purpose-jb-2.jpeg",
       "idiom" : "universal",
       "scale" : "3x"
     }

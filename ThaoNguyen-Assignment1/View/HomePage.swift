@@ -9,20 +9,24 @@ import SwiftUI
 
 struct HomePage: View {
     var columns = [GridItem(.adaptive(minimum: 160), spacing: 10)]
+    
     var body: some View {
         NavigationView {
+            ScrollView(.vertical, showsIndicators: false){
                 ZStack {
                     Image("bg2")
                         .resizable()
                         .edgesIgnoringSafeArea(.all)
                     VStack {
+                        header
                         artistSection
                         albumSection
                     }
-                    .edgesIgnoringSafeArea(.top)
-
+                    
                 }
-               
+                
+            }
+            .edgesIgnoringSafeArea(.top)
         }
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
@@ -32,12 +36,49 @@ struct HomePage: View {
 }
 
 extension HomePage {
+    
+    private var header: some View{
+        VStack(alignment:.leading){
+            HStack{
+                Spacer()
+                Image(systemName: "line.horizontal.3.decrease")
+                    .resizable()
+                    .frame(width: 24, height: 24)
+            }
+            .padding(25)
+            
+            HStack{
+                HStack{
+                    Image(systemName: "magnifyingglass")
+                        .foregroundColor(Color(UIColor.systemIndigo))
+                        .padding()
+                    Text("Search Artists, Albums etc...")
+                        .font(.footnote)
+                        .padding()
+                    Spacer()
+                    Divider().frame(height: 24)
+                    Image(systemName: "arrowtriangle.down.fill")
+                        .resizable()
+                        .frame(width: 8, height: 8)
+                        .padding()
+                }
+                .foregroundColor(Color.secondary.opacity(0.5))
+                .background(Color.gray.opacity(0.1))
+                .cornerRadius(80)
+                .shadow(radius: 1)
+                .padding()
+            }
+            
+
+            
+        }
+    }
+    
     private var artistSection: some View{
         VStack(alignment: .leading) {
             Text("Artists")
-                .font(.custom("AbrilFatface-Regular", size: 40))
+                .font(.custom("AbrilFatface-Regular", size: 35))
                 .foregroundColor(ColorConstants.main1)
-                .background(Color.white)
                 .padding()
         
             ScrollView(.horizontal, showsIndicators: false){
@@ -59,10 +100,11 @@ extension HomePage {
         }
         
     }
+    
     private var albumSection: some View{
         VStack(alignment: .leading) {
             Text("Albums")
-                .font(.custom("AbrilFatface-Regular", size: 40))
+                .font(.custom("AbrilFatface-Regular", size: 35))
                 .foregroundColor(ColorConstants.main1)
             .padding()
             ScrollView {

@@ -41,7 +41,7 @@ struct AlbumDetails: View {
 extension AlbumDetails {
     private var ImageSection: some View{
         TabView{
-            ForEach(album.imageName, id: \.self) { imageName in
+            ForEach(album.imageName.prefix(3), id: \.self) { imageName in
                 Image(imageName)
                     .resizable()
                     .scaledToFill()
@@ -137,11 +137,18 @@ extension AlbumDetails {
                 }
             }
             .sheet(isPresented: $showSheet, content: {
-                LocationView(coordinate: album.coordinates)
-                    .overlay(DismissButton, alignment:
+                ZStack {
+                    LocationView(coordinate: album.coordinates)
+                        .overlay(DismissButton, alignment:
                             .topLeading)
-            }
-            )
+                    VStack {
+                        Spacer()
+                        LocationPreview(album: album)
+                            .shadow(color: .black.opacity(0.3), radius: 20)
+                    }
+                        
+                }
+            })
             .buttonStyle(GradientButtonStyle())
             .padding()
             
@@ -179,6 +186,6 @@ struct GradientButtonStyle: ButtonStyle {
 
 struct AlbumDetails_Previews: PreviewProvider {
     static var previews: some View {
-        AlbumDetails(album: albums[0])
+        AlbumDetails(album: albums[4])
     }
 }

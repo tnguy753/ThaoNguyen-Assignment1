@@ -19,6 +19,8 @@ struct Album: Identifiable {
     var genre: String
     var link: String
     var coordinates: CLLocationCoordinate2D
+    var locationName: String
+    var address: String
 //    var image: Image{
 //        Image(imageName)
 //    }

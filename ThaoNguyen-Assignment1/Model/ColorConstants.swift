@@ -15,7 +15,7 @@ struct ColorConstants{
     static let main1 = Color(red: 46/255, green: 167/255, blue: 189/255)
     static let bg =  LinearGradient(gradient: Gradient(colors: [.white,main1]), startPoint: .topLeading, endPoint: .bottomTrailing)
     static let bg2 = RadialGradient(gradient: Gradient(
-        colors: [main, .white]),
+        colors: [main1, .white, main]),
         center: .center,
         startRadius: 2,
         endRadius: 650)

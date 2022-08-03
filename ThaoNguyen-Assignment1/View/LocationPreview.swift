@@ -15,20 +15,16 @@ struct LocationPreview: View {
                 imageSection
                 titleSection
             }
-
-            VStack (spacing: 8){
-                learnMoreButton
-                nextButton
-            }
-            
+            addressSection
         }
-        .padding(20)
+        .padding(15)
         .background(
             RoundedRectangle(cornerRadius: 10)
-                .fill(.ultraThinMaterial)
-                .offset(y: 65)
+                .fill(ColorConstants.main1)
+                .offset(y: 40)
         )
         .cornerRadius(10)
+        
         .padding()
     }
         
@@ -36,6 +32,7 @@ struct LocationPreview: View {
 
 struct LocationPreview_Previews: PreviewProvider {
     static var previews: some View {
+        LocationPreview(album: albums[0])
         LocationPreview(album: albums[1])
     }
 }
@@ -44,7 +41,7 @@ extension LocationPreview{
     
     private var imageSection: some View {
         ZStack {
-            if let imageName = album.imageName.first {
+            if let imageName = album.imageName[3] {
                 Image(imageName)
                     .resizable()
                     .scaledToFill()
@@ -53,38 +50,37 @@ extension LocationPreview{
             }
         }
         .padding(6)
-        .background(ColorConstants.main)
+        .background(ColorConstants.main1)
+        .shadow(color: .white, radius: 10)
         .cornerRadius(10)
     }
     
     private var titleSection: some View {
          VStack(alignment: .leading, spacing: 4) {
-             Text(album.albumName)
+             Text(album.locationName)
                  .font(.title2)
                  .fontWeight(.bold)
-             Text(album.artist)
-                 .font(.subheadline)
+                 .foregroundColor(ColorConstants.main2)
          }
          .frame(maxWidth: .infinity, alignment: .leading)
       
         
     }
     
-    private var learnMoreButton: some View {
-        Button{} label: {
-            Text("Learn more")
-                .font(.headline)
-                .frame(width: 125, height: 30)
+    private var addressSection: some View {
+        VStack(alignment: .center, spacing:3) {
+            Image(systemName: "map.fill")
+                .font(.title3)
+                .foregroundColor(ColorConstants.main2)
+                .background(ColorConstants.main1)
+            Text(album.address)
+                .font(.subheadline)
+                .fontWeight(.semibold)
+                .foregroundColor(ColorConstants.main2)
         }
-        .buttonStyle(.borderedProminent)
+        
+
     }
     
-    private var nextButton: some View {
-        Button{} label: {
-            Text("Next")
-                .font(.headline)
-                .frame(width: 125, height: 30)
-        }
-        .buttonStyle(.bordered)
-    }
+
 }

@@ -16,7 +16,6 @@ struct ArtistRow: View {
                 .cornerRadius(20)
                 .scaledToFit()
                 .frame(width:180)
-           
         }
         .padding()
         .frame(width: 135, height: 180)
@@ -26,6 +25,6 @@ struct ArtistRow: View {
 
 struct ArtistRow_Previews: PreviewProvider {
     static var previews: some View {
-        ArtistRow(album: albums[0])
+        ArtistRow(album: albums[3])
     }
 }

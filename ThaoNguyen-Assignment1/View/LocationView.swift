@@ -6,36 +6,33 @@
 //
 
 import SwiftUI
-import CoreLocation
 import MapKit
 
 struct LocationView: View {
     var coordinate: CLLocationCoordinate2D
-
+    
     @State private var region = MKCoordinateRegion()
     
     var body: some View {
-        ZStack {
-            Map(coordinateRegion: $region)
+        Map(coordinateRegion: $region, annotationItems: albums, annotationContent: {album in MapMarker(
+            coordinate: coordinate, tint: ColorConstants.main1)
+            
+        })
+        
                 .onAppear {
                     setRegion(coordinate)
                 }
                 .ignoresSafeArea()
-            Spacer()
-//            LocationPreview(album: album)
-//                .shadow(color: .black.opacity(0.3), radius: 20)
-//                .padding()
+
         }
-        
-    }
     private func setRegion(_ coordinate: CLLocationCoordinate2D) {
         region = MKCoordinateRegion(
             center: coordinate,
-            span: MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001)
+            span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
         )
     }
-
-    }
+    
+}
 
 struct LocationView_Previews: PreviewProvider {
     static var previews: some View {
