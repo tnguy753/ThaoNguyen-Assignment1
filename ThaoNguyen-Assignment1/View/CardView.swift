@@ -1,3 +1,14 @@
+/*
+ RMIT University Vietnam
+ Course: COSC2659 iOS Development
+ Semester: 2022B
+ Assessment: Assignment 1
+ Author: Nguyen Thi Huong Thao
+ ID: s3891825
+ Created  date: 28/07/2022
+ Last modified: 07/08/2022
+ Acknowledgement: Acknowledge the resources that you use here.
+ */
 //
 //  CardView.swift
 //  ThaoNguyen-Assignment1
@@ -8,11 +19,10 @@
 import SwiftUI
 
 struct CardView: View {
-    
-    let album: Album
+    // Initialize album array
+    var album: Album
     
     var body: some View {
-        
         VStack {
             ZStack(alignment: .bottom) {
                 Image(album.imageName[1])

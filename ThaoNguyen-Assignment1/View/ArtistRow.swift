@@ -1,3 +1,14 @@
+/*
+ RMIT University Vietnam
+ Course: COSC2659 iOS Development
+ Semester: 2022B
+ Assessment: Assignment 1
+ Author: Nguyen Thi Huong Thao
+ ID: s3891825
+ Created  date: 28/07/2022
+ Last modified: 07/08/2022
+ Acknowledgement: Acknowledge the resources that you use here.
+ */
 //
 //  ArtistRow.swift
 //  ThaoNguyen-Assignment1
@@ -8,9 +19,11 @@
 import SwiftUI
 
 struct ArtistRow: View {
+    // Initialize album array
     var album: Album
     var body: some View {
         ZStack(alignment: .bottom) {
+            // Design artist logo image
             Image(album.logo)
                 .resizable()
                 .cornerRadius(20)
@@ -25,6 +38,6 @@ struct ArtistRow: View {
 
 struct ArtistRow_Previews: PreviewProvider {
     static var previews: some View {
-        ArtistRow(album: albums[3])
+        ArtistRow(album: albums[2])
     }
 }
