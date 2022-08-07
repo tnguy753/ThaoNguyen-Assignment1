@@ -12,8 +12,9 @@ struct AlbumDetails: View {
     var album: Album
 
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @State private var showSheet = false
-    
+    @State private var showSheetTrack = false
+    @State private var showSheetLocation = false
+
     var body: some View {
         ScrollView {
             VStack (spacing: 2){
@@ -23,7 +24,6 @@ struct AlbumDetails: View {
                     TitleSection
                     Divider()
                     DescriptionSection
-                    
                 }
                 .navigationBarBackButtonHidden(true)
                 .navigationBarItems(leading:BackButton(action: {presentationMode.wrappedValue.dismiss()})
@@ -93,17 +93,9 @@ extension AlbumDetails {
                     .tint(ColorConstants.main1)
                     }
                     Spacer()
-                    Button () {
-                        
-                    } label: {
-                        Text("Track List")
-                            .font(.headline)
-                            .foregroundColor(ColorConstants.main1)
-                    }
-                    .buttonStyle(.bordered)
+                    TrackListSection
                     ButtonSection
                 }
-                
             }
             
         }
@@ -113,7 +105,8 @@ extension AlbumDetails {
 
     private var DismissButton: some View{
         Button(){
-            showSheet = false
+            showSheetLocation = false
+            showSheetTrack = false
         } label: {
             Image(systemName: "xmark")
                 .font(.headline)
@@ -125,18 +118,43 @@ extension AlbumDetails {
                 .padding()
         }
     }
+    
+    private var TrackListSection: some View{
+        ZStack{
+            HStack{
+                Button {
+                    showSheetTrack = true
+                } label: {
+                    Text("Tracklist")
+                        .font(.headline)
+                        .foregroundColor(ColorConstants.main1)
+                }
+                .buttonStyle(.bordered)
+            }
+            .sheet(isPresented: $showSheetTrack, content: {
+                TrackView(album: album)
+                .overlay(DismissButton, alignment:
+                    .topLeading)
+                }
+            )
+            
+        }
+        
+    }
+        
+    
     private var ButtonSection: some View{
         ZStack{
             HStack{
                 Button {
-                    showSheet = true
+                    showSheetLocation = true
                 } label: {
                     Text("Buy Now")
                         .font(.headline)
                         .frame(width: 125, height: 35)
                 }
             }
-            .sheet(isPresented: $showSheet, content: {
+            .sheet(isPresented: $showSheetLocation, content: {
                 ZStack {
                     LocationView(coordinate: album.coordinates)
                         .overlay(DismissButton, alignment:
@@ -186,6 +204,6 @@ struct GradientButtonStyle: ButtonStyle {
 
 struct AlbumDetails_Previews: PreviewProvider {
     static var previews: some View {
-        AlbumDetails(album: albums[4])
+        AlbumDetails(album: albums[6])
     }
 }

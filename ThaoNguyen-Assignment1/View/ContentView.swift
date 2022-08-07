@@ -13,7 +13,6 @@ struct ContentView: View {
 
     @Binding var active: Bool
     var body: some View {
-
             GeometryReader{ proxy in
                 ZStack{
                     Ellipse().fill(ColorConstants.main
@@ -21,11 +20,11 @@ struct ContentView: View {
                     .rotationEffect(.degrees(90))
                     .offset(y: -screen.bounds.width*0.7)
                     .edgesIgnoringSafeArea(.top)
-                    VStack(alignment: .leading, spacing: 24) {
+                    VStack(alignment: .center, spacing: 24) {
                         VStack(alignment: .center, spacing: 20) {
-                            Text("Music Library")
+                            Text("Music Station")
                                 .font(.custom("AbrilFatface-Regular", size: 36))
-                            Text("Where you can find the best source of music record")
+                            Text("Where you can find the best music records")
                                     .font(.custom("AbrilFatface-Regular", size: 17))
                         }
                         .foregroundColor(ColorConstants.main1)
@@ -50,12 +49,14 @@ struct ContentView: View {
                                 active = false },
                              label: {
                                 Text("Get started")
-                                    .font(.custom("AbrilFatface-Regular", size: 20))
+                                    .font(.title3)
+                                    .fontWeight(.bold)
                                     .foregroundColor(.white)
                                     .padding(.all, 18)
                                     .background(ColorConstants.bg2.opacity(0.8))
-                                    .cornerRadius(12)
+                                    .cornerRadius(50)
                                     .shadow(radius: 2)
+                                    .frame(maxWidth: .infinity)
                                
                             })
                         }

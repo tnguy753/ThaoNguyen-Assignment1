@@ -17,12 +17,10 @@ struct Album: Identifiable {
     var imageName: [String]
     var description: String
     var genre: String
+    var tracklist: [String]
     var link: String
     var coordinates: CLLocationCoordinate2D
     var locationName: String
     var address: String
-//    var image: Image{
-//        Image(imageName)
-//    }
 }
 

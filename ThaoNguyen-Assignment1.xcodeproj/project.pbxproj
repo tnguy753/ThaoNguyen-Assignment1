@@ -10,6 +10,7 @@
 		F646B5582899204F00501725 /* LocationPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F646B5572899204E00501725 /* LocationPreview.swift */; };
 		F646B55A2899783B00501725 /* DemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F646B5592899783B00501725 /* DemoView.swift */; };
 		F67F82B7289A85F50072623C /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67F82B6289A85F50072623C /* CardView.swift */; };
+		F689DAA3289E56B400E41BD0 /* TrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F689DAA2289E56B400E41BD0 /* TrackView.swift */; };
 		F69E558128969E5D0067AF9D /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69E558028969E5D0067AF9D /* LocationView.swift */; };
 		F69E558328969FBD0067AF9D /* ArtistRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69E558228969FBD0067AF9D /* ArtistRow.swift */; };
 		F6FE101C289251FB00B58A5A /* ThaoNguyen_Assignment1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FE101B289251FB00B58A5A /* ThaoNguyen_Assignment1App.swift */; };
@@ -50,6 +51,7 @@
 		F646B5572899204E00501725 /* LocationPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPreview.swift; sourceTree = "<group>"; };
 		F646B5592899783B00501725 /* DemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoView.swift; sourceTree = "<group>"; };
 		F67F82B6289A85F50072623C /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		F689DAA2289E56B400E41BD0 /* TrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackView.swift; sourceTree = "<group>"; };
 		F69E558028969E5D0067AF9D /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		F69E558228969FBD0067AF9D /* ArtistRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistRow.swift; sourceTree = "<group>"; };
 		F6FE1018289251FB00B58A5A /* ThaoNguyen-Assignment1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ThaoNguyen-Assignment1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,6 +182,7 @@
 				F646B5572899204E00501725 /* LocationPreview.swift */,
 				F69E558228969FBD0067AF9D /* ArtistRow.swift */,
 				F646B5592899783B00501725 /* DemoView.swift */,
+				F689DAA2289E56B400E41BD0 /* TrackView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				F6FE1048289254B900B58A5A /* AlbumList.swift in Sources */,
 				F6FE101E289251FB00B58A5A /* ContentView.swift in Sources */,
 				F6FE10582894BBC200B58A5A /* HomePage.swift in Sources */,
+				F689DAA3289E56B400E41BD0 /* TrackView.swift in Sources */,
 				F6FE101C289251FB00B58A5A /* ThaoNguyen_Assignment1App.swift in Sources */,
 				F646B5582899204F00501725 /* LocationPreview.swift in Sources */,
 				F69E558128969E5D0067AF9D /* LocationView.swift in Sources */,

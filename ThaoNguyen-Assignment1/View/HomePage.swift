@@ -12,11 +12,11 @@ struct HomePage: View {
     
     var body: some View {
         NavigationView {
-            ScrollView(.vertical, showsIndicators: false){
-                ZStack {
-                    Image("bg2")
-                        .resizable()
-                        .edgesIgnoringSafeArea(.all)
+            ZStack{
+                Image("bg2")
+                    .resizable()
+                    .edgesIgnoringSafeArea(.all)
+                ScrollView(.vertical, showsIndicators: false) {
                     VStack {
                         header
                         artistSection
@@ -24,11 +24,10 @@ struct HomePage: View {
                     }
                     
                 }
-                
             }
-            .edgesIgnoringSafeArea(.top)
+            .navigationBarHidden(true)
         }
-        .navigationBarHidden(true)
+        
         .navigationBarBackButtonHidden(true)
     }
         
@@ -38,14 +37,17 @@ struct HomePage: View {
 extension HomePage {
     
     private var header: some View{
-        VStack(alignment:.leading){
+        VStack(){
             HStack{
-                Spacer()
                 Image(systemName: "line.horizontal.3.decrease")
                     .resizable()
                     .frame(width: 24, height: 24)
+                Spacer()
+                Text("Music")
+                    .font(.system(.headline, design: .rounded))
+                Text("Library")
+                    .fontWeight(.ultraLight)
             }
-            .padding(25)
             
             HStack{
                 HStack{
@@ -67,10 +69,10 @@ extension HomePage {
                 .cornerRadius(80)
                 .shadow(radius: 1)
                 .padding()
+                
             }
-            
+           
 
-            
         }
     }
     
